@@ -1,0 +1,67 @@
+sources:
+  - name: demo_src
+    description: Fact data from airflights database
+    tables:
+      - name: boarding_passes
+        columns:
+          - name: ticket_no
+          - name: flight_id
+          - name: boarding_no
+          - name: seat_no
+      - name: routes
+        columns:
+          - name: flight_no
+          - name: departure_airport
+          - name: departure_airport_name
+          - name: departure_city
+          - name: arrival_airport
+          - name: arrival_airport_name
+          - name: arrival_city
+          - name: aircraft_code
+          - name: duration
+          - name: days_of_week
+      - name: flights
+        columns:
+          - name: flight_id
+          - name: flight_no
+          - name: scheduled_departure
+          - name: scheduled_arrival
+          - name: departure_airport
+          - name: arrival_airport
+          - name: status
+          - name: aircraft_code
+          - name: actual_departure
+          - name: actual_arrival
+      - name: flights_v
+        columns:
+          - name: flight_id
+          - name: flight_no
+          - name: scheduled_departure
+          - name: scheduled_departure_local
+          - name: scheduled_arrival
+          - name: scheduled_arrival_local
+          - name: scheduled_duration
+          - name: departure_airport
+          - name: arrival_airport
+          - name: arrival_city
+          - name: status
+          - name: aircraft_code
+          - name: actual_departure
+          - name: actual_departure_local
+          - name: actual_arrival
+          - name: actual_arrival_local
+          - name: actual_duration
+      - name: tickets
+        columns:
+          - name: ticket_no
+          - name: book_ref
+          - name: passenger_id
+          - name: passenger_name
+          - name: contact_data
+      - name: ticket_flights
+        columns:
+          - name: ticket_no
+          - name: flight_id
+          - name: fare_conditions
+          - name: amount
+          

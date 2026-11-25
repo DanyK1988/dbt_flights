@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fct_bookings
+    description: Bookings facts
+    docs:
+      show: true
+      node_color: red
+    latest_version: 1
+    versions:
+      - v: 1
+    access: private
+    config:
+      contract: {enforced: true}
+    meta:
+      owner: "daniil k"
+      contact_tg: danykaliberda
+
+    columns:
+      - name: book_ref
+        data_type: varchar(8)
+        constraints:
+          - type: not_null
+      - name: book_date
+        data_type: timestamptz
+      - name: total_amount
+        data_type: numeric(10, 2)
+
+  - name: fct_ticket_flights
+    description: List of flights for one ticket
+    docs:
+      show: true
+      node_color: green
+    latest_version: 1
+    versions:
+      - v: 1
+    meta:
+      owner: "daniil k"
+      contact_tg: danykaliberda
+
+

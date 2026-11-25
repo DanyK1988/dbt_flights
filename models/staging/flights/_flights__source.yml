@@ -25,7 +25,6 @@ sources:
           - name: aircraft_code
           - name: seat_no
           - name: fare_conditions
-      - name: boarding_passes
       - name: bookings
         columns:
           - name: book_ref
@@ -40,9 +39,4 @@ sources:
             period: day
           filter: current_timestamp::date - book_date::date < 300000
         loaded_at_field: book_date::timestamp
-      - name: flights
-      - name: flights_v
-      - name: routes
-      - name: tickets
-
 
