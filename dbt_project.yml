@@ -32,5 +32,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   flights_dwh:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +meta:
+      owner: "dbt_project_yml@gmail.com"
+      year_created: 2026
+    staging:
+      +tags: 
+        - 'staging_from_yml'
+    intermediate:
+      +tags:
+        - 'intermediate_from_yml'
+seeds:
+  flights_dwh:
+    schema: seeds

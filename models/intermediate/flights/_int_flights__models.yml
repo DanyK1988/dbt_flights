@@ -12,9 +12,10 @@ models:
     access: private
     config:
       contract: {enforced: true}
-    meta:
-      owner: "daniil k"
-      contact_tg: danykaliberda
+      meta:
+        owner: "yml_file_owner@gmail.com"
+        status: in_dev
+        contact_tg: danykaliberda      
 
     columns:
       - name: book_ref
