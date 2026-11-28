@@ -14,8 +14,9 @@ from
 
 select 
     {% for aircraft in important_aircrafts -%}
-    SUM(case when aircraft_code = '{{ aircraft }}' then 1 else 0 end) as flights_{{ aircraft }} 
+    SUM(case when aircraft_code = '{{ aircraft }}' then 1 else 0 end) as flights_{{ aircraft|title }}
         {%- if not loop.last %},{% endif %}
+        -- {{ loop.index }}
     {% endfor %}
 from
     {{ ref('fct_flights') }}
